@@ -16,10 +16,6 @@ form {
     border-bottom: 1px solid #eee;
 }
 
-.form-row img, .form-row input {
-    vertical-align: middle;
-}
-
 form .form-row p {
     padding-left: 0;
     font-size: 11px;
