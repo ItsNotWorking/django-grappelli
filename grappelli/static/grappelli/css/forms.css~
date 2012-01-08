@@ -9,22 +9,6 @@ form {
     padding: 0;
 }
 
-.form-row {
-    overflow: hidden;
-    padding: 8px 12px;
-    font-size: 11px;
-    border-bottom: 1px solid #eee;
-}
-
-.form-row img, .form-row input {
-    vertical-align: middle;
-}
-
-form .form-row p {
-    padding-left: 0;
-    font-size: 11px;
-}
-
 fieldset {
     margin: 0;
     padding: 0;
