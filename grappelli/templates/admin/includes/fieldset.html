@@ -3,7 +3,7 @@
         {% if fieldset.name %}<h2 class="collapse-handler">{{ fieldset.name }}</h2>{% endif %}
         {% if fieldset.description %}<div class="description">{{ fieldset.description|safe }}</div>{% endif %}
         {% for line in fieldset %}
-            <div class="row cells-{{ line.fields|length }}{% if not line.fields|length_is:"1" %} cells{% else %}{% if line.errors %} errors{% endif %}{% endif %}{% for field in line %} {{ field.field.name }}{% endfor %} ">
+            <div class="form-row row cells-{{ line.fields|length }}{% if not line.fields|length_is:"1" %} cells{% else %}{% if line.errors %} errors{% endif %}{% endif %}{% for field in line %} {{ field.field.name }}{% endfor %} ">
                 {% for field in line %}
                     <div{% if not line.fields|length_is:"1" %} class="cell {{ field.field.name }}{% if field.field.errors %} error{% endif %}"{% endif %}>
                         {% if field.is_checkbox %}

@@ -100,7 +100,7 @@
             var index = parseInt(totalForms.val(), 10),
                 form = empty_template.clone(true);
             form.removeClass(options.emptyCssClass)
-                .attr("id", empty_template.attr('id').replace("-empty", index))
+                .attr("id", empty_template.attr('id').replace("-empty", "-"+index))
                 .insertBefore(empty_template)
                 .addClass(options.formCssClass);
             // update form index

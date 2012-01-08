@@ -17,7 +17,7 @@
         {% with inline_admin_formset.opts.sortable_field_name|default:"" as sortable_field_name %}
         {% for inline_admin_form in inline_admin_formset|formsetsort:sortable_field_name %}
             <!-- element -->
-            <div class="module collapse closed{% if inline_admin_form.original or inline_admin_form.show_url %} has_original{% endif %}{% if forloop.last %} empty-form{% endif %}"
+            <div class="module collapse closed inline-related{% if inline_admin_form.original or inline_admin_form.show_url %} has_original{% endif %}{% if forloop.last %} empty-form{% endif %}"
                 id="{{ inline_admin_formset.formset.prefix }}{% if forloop.last %}-empty{% else %}{{ forloop.counter0 }}{% endif %}">
                 <h3 class="collapse-handler">{{ inline_admin_formset.opts.verbose_name|title }}&nbsp;&nbsp;{% if inline_admin_form.original %}{{ inline_admin_form.original }}{% endif %}</h3>
                 <ul class="tools">
@@ -48,7 +48,7 @@
         {% endwith %}
         {{ inline_admin_formset.extra_forms }}
     </div>
-    <div class="module add-item">
+    <div class="module add-item add-row">
         <a href="javascript://" class="add-handler">{% blocktrans with inline_admin_formset.opts.verbose_name|title as verbose_name %}Add another {{ verbose_name }}{% endblocktrans %}</a>
         <ul class="tools">
             <li class="add-handler-container"><a href="javascript://" class="icon add-handler" title="{% trans 'Add Item' %}"> </a></li>
@@ -227,6 +227,12 @@
         });
         {% endif %}
         
+        if (CONTENT_NAMES)
+        {
+            $.each(CONTENT_NAMES, function(name, value) {
+                $('#' + name + '_set-group > .items .module').removeClass("closed");
+            });
+        }
     });
 })(django.jQuery);
 </script>

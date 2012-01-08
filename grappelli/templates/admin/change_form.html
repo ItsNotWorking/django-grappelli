@@ -143,19 +143,17 @@
                     {% submit_row %}
                     
                     {% if adminform and add %}
-                        {% block extrahead %}
-                            <script type="text/javascript">
-                                (function($){
-                                    $(function(){
-                                        try {
-                                            // focus on first form-field
-                                            $("#{{ adminform.first_field.auto_id }}, #{{ adminform.first_field.auto_id }}_0")
-                                            .eq(0).focus();
-                                        } catch(e) {}
-                                    });
-                                }(django.jQuery));
-                            </script>
-                        {% endblock %}
+                        <script type="text/javascript">
+                            (function($){
+                                $(function(){
+                                    try {
+                                        // focus on first form-field
+                                        $("#{{ adminform.first_field.auto_id }}, #{{ adminform.first_field.auto_id }}_0")
+                                        .eq(0).focus();
+                                    } catch(e) {}
+                                });
+                            }(django.jQuery));
+                        </script>
                     {% endif %}
                     
                     <!-- JS for prepopulated fields -->

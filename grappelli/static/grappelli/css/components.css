@@ -43,7 +43,15 @@ fieldset.module label + p {
     margin: 0;
 }
 
+.module h2, .module caption, .inline-group h2 {
+    font-size: 11px;
+    font-weight: bold;
+    text-align: left;
+}
 
+span.modname {
+    color: white;
+}
 
 /*  Groups
 ------------------------------------------------------------------------------------------------------ */
@@ -295,7 +303,13 @@ h2 + * + * + .module.table {
     font-weight: bold;
 }
 
+div.order-machine div.inline-related > h3.collapse-handler {
+    display: none !important;
+}
 
+div.order-machine div.inline-related > ul.tools {
+    display: none !important;
+}
 
 /*  Selectors
 ------------------------------------------------------------------------------------------------------ */
