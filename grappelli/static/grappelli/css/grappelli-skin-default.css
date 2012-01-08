@@ -313,7 +313,7 @@ form#bookmark-form button.bookmarked:hover {
 /*  Breadcrumbs
 ------------------------------------------------------------------------------------------------------ */
 
-div#breadcrumbs {
+div#breadcrumbs, div.breadcrumbs {
     color: #666;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;

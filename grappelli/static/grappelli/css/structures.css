@@ -326,7 +326,7 @@ ul.user-options li a {
 /*  Breadcrumbs
 ------------------------------------------------------------------------------------------------------ */
 
-div#breadcrumbs {
+div#breadcrumbs, div.breadcrumbs {
     position: fixed;
     top: 30px;
     left: 0;
@@ -337,10 +337,10 @@ div#breadcrumbs {
 /*    font-weight: bold;*/
     text-align: left;
 }
-div#breadcrumbs > a {
+div#breadcrumbs > a, div.breadcrumbs > a {
     padding: 10px 2px;
 }
-body.popup div#breadcrumbs {
+body.popup div#breadcrumbs, body.popup div.breadcrumbs {
     top: 0;
 }
 
