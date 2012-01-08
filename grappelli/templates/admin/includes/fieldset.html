@@ -1,5 +1,5 @@
 {% spaceless %}
-    <fieldset class="module {{ fieldset.classes }}">
+    <fieldset class="module {{ fieldset.classes }} {% if 'collapse' in fieldset.classes %}closed{% endif %}">
         {% if fieldset.name %}<h2 class="collapse-handler">{{ fieldset.name }}</h2>{% endif %}
         {% if fieldset.description %}<div class="description">{{ fieldset.description|safe }}</div>{% endif %}
         {% for line in fieldset %}
